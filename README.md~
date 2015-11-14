@@ -1,0 +1,19 @@
+Uses the PostgreSQL database to keep track of players and matches in a game tournament.
+The game tournament will use the Swiss system for pairing up players in each round: players are not eliminated, and each player should be paired with another player with the same number of wins, or as close as possible.
+To get started
+
+## Table of contents
+
+* [Quick start](#quick-start)
+* [Creators](#creators)
+
+
+## Quick Start
+Couple options to run file: 
+Run in linux
+* Execute in terminal: python tournament_test.py
+Run in Windows
+* Execute on command line c:\python\python tournament_test.py
+
+## Creators
+**Jonathan Jones**
