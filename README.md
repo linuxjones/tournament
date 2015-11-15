@@ -1,5 +1,6 @@
-Uses the PostgreSQL database to keep track of players and matches in a game tournament.
+﻿Tournament results uses the PostgreSQL database to keep track of players and matches in a game tournament.
 The game tournament will use the Swiss system for pairing up players in each round: players are not eliminated, and each player should be paired with another player with the same number of wins, or as close as possible.
+
 To get started
 
 ## Table of contents
@@ -20,6 +21,7 @@ Required to run the project
 
 Postgres database
 Python 2.7
+
 1. Connect to the postgres database by typing psql
 2. Execute \i tournment.sql
 3. Disconnect from psql by executing \q
