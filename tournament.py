@@ -68,7 +68,7 @@ def playerStandings():
     """
     conn = connect()
     c = conn.cursor()
-    c.execute("select * from standings")
+    c.execute("select * from standings order by wins desc")
     playerstands = c. fetchall()
     conn.close()
     return playerstands
@@ -82,8 +82,8 @@ def reportMatch(winner, loser):
     """
     conn = connect()
     c = conn.cursor()
-    c.execute("insert into matches values(%s,%s,true)", (winner, loser))
-    c.execute("insert into matches values(%s,%s,false)", (loser, winner))
+    c.execute("insert into matches (winner, loser) values(%s,%s)", (winner, loser))
+    '    c.execute("insert into matches values(%s,%s)", (loser, winner))'
     conn.commit()
     conn.close()
  	
@@ -109,10 +109,8 @@ def swissPairings():
     conn.close()	
     '''
     '''
-    zip-iterate over two lists and their indices using enumerate together with zip
+    zip(x,y) creates a tuple collection from x and y collections same index elements.
     data[0::2] means create subset collection of elements that (index % 2 == 0)
-    https://stackoverflow.com/questions/5389507/iterating-over-every-two-elements-in-a-list/5389578#5389578
-    http://www.saltycrane.com/blog/2008/04/how-to-use-pythons-enumerate-and-zip-to/
     '''
     data = playerStandings()
     pair = list()
