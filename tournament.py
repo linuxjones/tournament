@@ -83,7 +83,6 @@ def reportMatch(winner, loser):
     conn = connect()
     c = conn.cursor()
     c.execute("insert into matches (winner, loser) values(%s,%s)", (winner, loser))
-    '    c.execute("insert into matches values(%s,%s)", (loser, winner))'
     conn.commit()
     conn.close()
  	
